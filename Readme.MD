@@ -11,6 +11,11 @@ This is a entry test for semasio.
 
 
 
+### API
+
+The API is [here](https://rawgit.com/hackhat/semasio-test/v1.0.0/docs/jsduck/index.html#!/api/shared.Logic).
+
+
 ## Install
 
  - Make sure you already have node.js installed;
