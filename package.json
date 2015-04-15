@@ -17,6 +17,7 @@
     "cucumber": "^0.4.8",
     "cucumberry": "0.0.3",
     "gulp": "^3.8.11",
-    "hide-stack-frames-from": "^1.0.0"
+    "hide-stack-frames-from": "^1.0.0",
+    "mocha": "^2.2.4"
   }
 }
