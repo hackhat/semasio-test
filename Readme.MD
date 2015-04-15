@@ -11,6 +11,13 @@ This is a entry test for semasio.
 
 
 
+## Results
+
+Test completed successfully and does what has been requested. Tests cover [![Coverage Status](https://coveralls.io/repos/hackhat/semasio-test/badge.svg)](https://coveralls.io/r/hackhat/semasio-test) of the application.
+
+
+
+
 ### Relevant files
 
  - [Logic](/src/shared/Logic.js);
