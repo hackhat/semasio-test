@@ -1,6 +1,6 @@
-// require    = require('../getWebpackRequire');
+require    = require('../getWebpackRequire');
 var expect = require("chai").expect;
-var Logic  = require('../src/shared/Logic')
+var Logic  = require('shared/Logic')
 
 
 
