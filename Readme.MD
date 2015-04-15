@@ -1,4 +1,4 @@
-# semasio-test [![Build Status](https://travis-ci.org/hackhat/semasio-test.svg?branch=dev)](https://travis-ci.org/hackhat/semasio-test)
+# semasio-test [![Build Status](https://travis-ci.org/hackhat/semasio-test.svg?branch=dev)](https://travis-ci.org/hackhat/semasio-test) [![Coverage Status](https://coveralls.io/repos/hackhat/semasio-test/badge.svg)](https://coveralls.io/r/hackhat/semasio-test)
 
 This is a entry test for semasio.
 
