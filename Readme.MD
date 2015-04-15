@@ -11,9 +11,17 @@ This is a entry test for semasio.
 
 
 
+### Relevant files
+
+ - [Logic](/src/shared/Logic.js);
+ - [Tests](/test/logic.js);
+
+
+
 ### API
 
 The API is [here](https://rawgit.com/hackhat/semasio-test/v1.0.0/docs/jsduck/index.html#!/api/shared.Logic).
+
 
 
 ## Install
