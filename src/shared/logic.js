@@ -5,6 +5,7 @@ var _ = require('lodash');
 
 
 /**
+ * @class shared.Logic
  * Returns the greatest product of 2 numbers from the array that
  * are multiples of 3.
  *
@@ -34,6 +35,7 @@ var _ = require('lodash');
  * @param {Number[]} numbers
  */
 var Logic = function(numbers){
+
     /**
      * Contains the initial numbers.
      * @private
@@ -73,23 +75,68 @@ _.extend(Logic.prototype, {
      * @param  {Number[]} numbers
      * @return {Number}
      */
-    calculate: function(numbers){
-        this.__permute(numbers);
+    calculate: function(){
+        if(this.__numbers.length < 2){
+            throw new Error('The array length of number provided should be superior to 1')
+        }
+        this.__permute(this.__numbers);
+        var max = -Infinity;
+        var validOutputs = this.__validOutputs;
+        var l = this.__validOutputs.length;
+        while(l--){
+            max = Math.max(max, validOutputs[l]);
+        }
+        this.__validOutputs = [];
+        if(max === -Infinity) return false;
+        return max;
     },
 
 
 
     /**
-     * Makes a single permutation.
+     * Makes a single permutation and it will call itself.
      * @private
      * @param  {Number[]} numbers
      * @return {Number}
      */
-    __permute: function(numbers){
+    __permute: function(numbers, startAt){
+        startAt = startAt === void 0 ? 0 : startAt;
         var l = numbers.length;
+        if(startAt > l - 1) return;
+        var product;
         while(l--){
-
+            // Don't make the product of the number at the same index.
+            if(l === startAt) continue;
+            product = numbers[startAt] * numbers[l];
+            if(!this.__isValidOutput(product)) continue;
+            this.__addValidOutput(product);
         }
+        this.__permute(numbers, startAt + 1);
+    },
+
+
+
+    /**
+     * Adds a valid output to the set.
+     * @private
+     * @param  {[type]} validOutput [description]
+     * @return {[type]}             [description]
+     */
+    __addValidOutput: function(validOutput){
+        this.__validOutputs.push(validOutput);
+    },
+
+
+
+    /**
+     * Checks whenever is a valid output or not.
+     * @private
+     * @param  {Number} output
+     * @return {Boolean} Returns true if is a valid output, false if is not valid.
+     */
+    __isValidOutput: function(output){
+        var isMultipleOf3 = output % 3 === 0;
+        return isMultipleOf3;
     }
 
 
