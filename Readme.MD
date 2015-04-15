@@ -1,4 +1,4 @@
-# semasio-test [![Build Status](https://travis-ci.org/hackhat/semasio-test.svg?branch=dev)](https://travis-ci.org/hackhat/semasio-test) [![Coverage Status](https://coveralls.io/repos/hackhat/semasio-test/badge.svg)](https://coveralls.io/r/hackhat/semasio-test)
+# semasio-test [![Build Status](https://travis-ci.org/hackhat/semasio-test.svg?branch=prod)](https://travis-ci.org/hackhat/semasio-test) [![Coverage Status](https://coveralls.io/repos/hackhat/semasio-test/badge.svg?branch=dev)](https://coveralls.io/r/hackhat/semasio-test?branch=dev)
 
 This is a entry test for semasio.
 
@@ -13,7 +13,7 @@ This is a entry test for semasio.
 
 ## Results
 
-Test completed successfully and does what has been requested. Tests cover [![Coverage Status](https://coveralls.io/repos/hackhat/semasio-test/badge.svg)](https://coveralls.io/r/hackhat/semasio-test) of the application.
+Test completed successfully and does what has been requested. Tests cover [![Coverage Status](https://coveralls.io/repos/hackhat/semasio-test/badge.svg?branch=dev)](https://coveralls.io/r/hackhat/semasio-test?branch=dev) of the application.
 
 
 
