@@ -5,6 +5,7 @@ var Logic  = require('shared/Logic')
 
 
 
+
 describe('logic', function(){
 
 
@@ -71,7 +72,7 @@ describe('logic', function(){
 
 
     it('Should consider 0 as multiple (by definition).', function(){
-        logic.setNumbers([0, 0]);
+        logic.setNumbers([0, 3]);
         expect(logic.calculate()).to.be.equal(0);
     })
 
