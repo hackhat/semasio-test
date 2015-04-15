@@ -13,6 +13,7 @@
     "checkDeps": "npm-dview"
   },
   "devDependencies": {
+    "chai": "^2.2.0",
     "cucumber": "^0.4.8",
     "cucumberry": "0.0.3",
     "gulp": "^3.8.11",

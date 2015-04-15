@@ -6,7 +6,7 @@ var webpackConfig = require('tottys-project').webpackConfig({
         enabled: false
     }
 }).settings;
-
+webpackConfig.resolve.alias.shared = webpackConfig.absPath('/src/shared/');
 module.exports = require('tottys-project').gulpfile({
     rootPath      : __dirname,
     webpackConfig : webpackConfig,
