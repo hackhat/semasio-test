@@ -1,0 +1,6 @@
+{
+    "--": ["./src"],
+    "--title": "semasio-test Docs",
+    "--output": "./docs/jsduck"
+    // "--guides": "./docs/guides/guides.json"
+}
