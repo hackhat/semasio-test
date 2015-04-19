@@ -1,6 +1,8 @@
-require    = require('../getWebpackRequire');
-var expect = require("chai").expect;
-var Logic  = require('shared/Logic')
+require       = require('../getWebpackRequire');
+var expect    = require("chai").expect;
+var Logic     = require('shared/Logic')
+var Benchmark = require('benchmark').Benchmark;
+var _         = require('lodash');
 
 
 
@@ -74,6 +76,38 @@ describe('logic', function(){
     it('Should consider 0 as multiple (by definition).', function(){
         logic.setNumbers([0, 3]);
         expect(logic.calculate()).to.be.equal(0);
+    })
+
+
+
+    it.only('Should be a O(n) algorithm.', function(){
+        this.timeout(60000);
+        var suite = new Benchmark.Suite;
+        var generateNNumbers = function(n){
+            var items = [];
+            _.times(n, function(){
+                items.push(Math.round(((Math.random() - 0.5) * 100)))
+            })
+            return items;
+        }
+
+        suite.add('10 items', function(){
+            logic.setNumbers(generateNNumbers(10));
+            logic.calculate();
+        })
+        .add('100 items', function(){
+            logic.setNumbers(generateNNumbers(100));
+            logic.calculate();
+        })
+        .on('complete', function(){
+            var results = this;
+            // results.forEach(function(suite){
+            //     console.log(suite.name, suite.stats.mean)
+            // })
+            // console.log(results[1].stats.mean / results[0].stats.mean);
+            expect(results[1].stats.mean / results[0].stats.mean).to.be.within(7.5, 12.5);
+        })
+        .run({'async': false});
     })
 
 

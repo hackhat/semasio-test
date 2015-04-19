@@ -14,6 +14,7 @@
     "checkDeps": "npm-dview"
   },
   "devDependencies": {
+    "benchmark": "^1.0.0",
     "chai": "^2.2.0",
     "coveralls": "^2.11.2",
     "cucumber": "^0.4.8",
