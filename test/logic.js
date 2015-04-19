@@ -95,18 +95,25 @@ describe('logic', function(){
             logic.setNumbers(generateNNumbers(10));
             logic.calculate();
         })
+        .add('50 items', function(){
+            logic.setNumbers(generateNNumbers(50));
+            logic.calculate();
+        })
         .add('100 items', function(){
             logic.setNumbers(generateNNumbers(100));
             logic.calculate();
         })
         .on('complete', function(){
             var results = this;
-            // Uncomment the follow lines to see the mean.
+            // Uncomment the following lines to see the mean.
             // results.forEach(function(suite){
             //     console.log(suite.name, suite.stats.mean)
             // })
-            // console.log(results[1].stats.mean / results[0].stats.mean);
-            expect(results[1].stats.mean / results[0].stats.mean).to.be.within(7.5, 12.5);
+            // Uncomment the following lines to see the increase relative to the base.
+            // console.log('x5', results[1].stats.mean / results[0].stats.mean);
+            // console.log('x10', results[2].stats.mean / results[0].stats.mean);
+            expect(results[1].stats.mean / results[0].stats.mean).to.be.below(7);
+            expect(results[2].stats.mean / results[0].stats.mean).to.be.below(15);
         })
         .run({'async': false});
     })
