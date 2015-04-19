@@ -107,6 +107,9 @@ _.extend(Logic.prototype, {
         while(l--){
             // Don't make the product of the number at the same index.
             if(l === startAt) continue;
+            // Hint given to check if at least one of the number is a multiple of 3 is not useful
+            // because doing 2 checks vs 1 check and multiplication is almost the same thing.
+            // You still have to loop all numbers therefore still has complexity O(n^2) instead of O(n).
             product = numbers[startAt] * numbers[l];
             if(!this.__isValidOutput(product)) continue;
             this.__addValidOutput(product);
