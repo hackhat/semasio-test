@@ -79,6 +79,7 @@ _.extend(Logic.prototype, {
         if(this.__numbers.length < 2){
             throw new Error('The array length of number provided should be superior to 1')
         }
+        this.__numbers = _.sortBy(this.__numbers);
         this.__permute(this.__numbers);
         var max = -Infinity;
         var validOutputs = this.__validOutputs;
