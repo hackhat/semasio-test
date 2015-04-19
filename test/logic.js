@@ -80,7 +80,7 @@ describe('logic', function(){
 
 
 
-    it.only('Should be a O(n) algorithm.', function(){
+    it('Should be a O(n) algorithm.', function(){
         this.timeout(60000);
         var suite = new Benchmark.Suite;
         var generateNNumbers = function(n){
@@ -101,6 +101,7 @@ describe('logic', function(){
         })
         .on('complete', function(){
             var results = this;
+            // Uncomment the follow lines to see the mean.
             // results.forEach(function(suite){
             //     console.log(suite.name, suite.stats.mean)
             // })
