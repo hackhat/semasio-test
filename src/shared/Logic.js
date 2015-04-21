@@ -107,9 +107,11 @@ _.extend(Logic.prototype, {
         while(l--){
             // Don't make the product of the number at the same index.
             if(l === startAt) continue;
-            product = numbers[startAt] * numbers[l];
-            if(!this.__isValidOutput(product)) continue;
-            this.__addValidOutput(product);
+            if(numbers[startAt] % 3 === 0 || numbers[l] % 3 === 0){
+                product = numbers[startAt] * numbers[l];
+                // if(!this.__isValidOutput(product)) continue;
+                this.__addValidOutput(product);
+            }
         }
         this.__permute(numbers, startAt + 1);
     },
